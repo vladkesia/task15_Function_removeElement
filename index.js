@@ -1,10 +1,10 @@
-const arr = [1,2,3,4,5,6,6];
+const arr = [1, 2, 3, 4, 5, 6, 7];
 
 function removeElement(array, item) {
     if(Array.isArray(array)) {
         for (let i = 0; i < array.length; i++) {
             if (array[i] === item) {
-                delete array[i]
+                array.splice(i,1)
             }
         }
         return array
@@ -13,5 +13,5 @@ function removeElement(array, item) {
     }
 }
 
-removeElement(arr,4)
+removeElement(arr,5)
 console.log(arr)
